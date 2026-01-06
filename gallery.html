@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Janara Cakes</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Janara Cakes</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="gallery.html" class="active">Галерея</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="order.html">Заказать</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Наши работы</h1>
+            <p>Каждый торт - уникальное произведение искусства</p>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery-section section">
+        <div class="container">
+            <!-- Фильтры -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="wedding">Свадебные</button>
+                <button class="filter-btn" data-filter="birthday">Дни рождения</button>
+                <button class="filter-btn" data-filter="corporate">Корпоративные</button>
+                <button class="filter-btn" data-filter="other">Другие</button>
+            </div>
+
+            <!-- Сетка галереи -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="wedding">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fff9f0 0%, #ffe4c4 100%);">
+                        <span class="image-placeholder">Свадебный торт 1</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Классический свадебный торт</h3>
+                        <p>Трёхъярусный торт с кремовыми розами</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="birthday">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #faf3e0 0%, #f5e6d3 100%);">
+                        <span class="image-placeholder">День рождения 1</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Торт с ягодами</h3>
+                        <p>Нежный бисквит со свежими ягодами</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="wedding">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f8f5f0 0%, #e8d5b7 100%);">
+                        <span class="image-placeholder">Свадебный торт 2</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Минималистичный свадебный торт</h3>
+                        <p>Элегантный дизайн в бежевых тонах</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="corporate">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f5f0e8 0%, #d9c4a9 100%);">
+                        <span class="image-placeholder">Корпоративный 1</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Корпоративный торт</h3>
+                        <p>Торт с логотипом компании</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="birthday">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fff8f0 0%, #f0d9b5 100%);">
+                        <span class="image-placeholder">День рождения 2</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Детский торт</h3>
+                        <p>Яркий и веселый торт для ребенка</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="other">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fdf6eb 0%, #e5d4b8 100%);">
+                        <span class="image-placeholder">Капкейки</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Капкейки</h3>
+                        <p>Набор изысканных капкейков</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="wedding">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fff5eb 0%, #f5d5a8 100%);">
+                        <span class="image-placeholder">Свадебный торт 3</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Роскошный свадебный торт</h3>
+                        <p>Многоярусный торт с золотыми элементами</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="birthday">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #faf5ed 0%, #e8d4b5 100%);">
+                        <span class="image-placeholder">День рождения 3</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Торт с цветами</h3>
+                        <p>Нежный торт с сахарными цветами</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="other">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f9f3e8 0%, #dfc9a8 100%);">
+                        <span class="image-placeholder">Десертный стол</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Десертный стол</h3>
+                        <p>Полное оформление сладкого стола</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="corporate">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f7f2e8 0%, #d8c5a5 100%);">
+                        <span class="image-placeholder">Корпоративный 2</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Презентационный торт</h3>
+                        <p>Элегантный торт для презентаций</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="other">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fcf4e9 0%, #e3d1b0 100%);">
+                        <span class="image-placeholder">Макаруны</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Макаруны</h3>
+                        <p>Французские пирожные макарон</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="birthday">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fff6ed 0%, #f2dab8 100%);">
+                        <span class="image-placeholder">День рождения 4</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Торт с фруктами</h3>
+                        <p>Летний торт со свежими фруктами</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Janara Cakes</h3>
+                    <p>Создаём торты с душой и любовью к деталям</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Instagram: @janara.cakes</p>
+                    <p>Email: info@janaracakes.com</p>
+                    <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="prices.html">Цены</a></li>
+                        <li><a href="order.html">Заказать</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Janara Cakes. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/gallery.js"></script>
+</body>
+
+</html>

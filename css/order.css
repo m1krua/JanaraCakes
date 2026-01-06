@@ -1,0 +1,322 @@
+/* ========================================
+   СТИЛИ ФОРМЫ ЗАКАЗА - order.css
+   ======================================== */
+
+.order-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Контейнер формы */
+.order-form-container {
+    position: relative;
+}
+
+.order-form {
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px var(--shadow-light);
+}
+
+/* Шаги формы */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-step h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--bg-beige);
+}
+
+/* Группы форм */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Кнопки формы */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.form-buttons .btn {
+    flex: 1;
+}
+
+/* Сообщение об успехе */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 60px 40px;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px var(--shadow-light);
+}
+
+.success-message.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon svg {
+    width: 45px;
+    height: 45px;
+    color: var(--primary-color);
+}
+
+.success-message h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    color: var(--text-medium);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Боковая панель */
+.order-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.info-card {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px var(--shadow-light);
+    margin-bottom: 25px;
+}
+
+.info-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* Список шагов */
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-content h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.step-content p {
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Список информации */
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    padding: 12px 0;
+    color: var(--text-medium);
+    position: relative;
+    padding-left: 25px;
+    border-bottom: 1px solid var(--bg-beige);
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Карточка контактов */
+.contact-card {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-color) 100%);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.contact-method:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.contact-method svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.contact-method span {
+    font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .order-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-form {
+        padding: 30px 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-step h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-form {
+        padding: 25px 15px;
+    }
+    
+    .success-message {
+        padding: 40px 20px;
+    }
+    
+    .success-message h2 {
+        font-size: 1.6rem;
+    }
+}

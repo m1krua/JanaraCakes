@@ -1,0 +1,256 @@
+/* ========================================
+   СТИЛИ ЦЕН - prices.css
+   ======================================== */
+
+/* Калькулятор */
+.calculator {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px var(--shadow-light);
+}
+
+.calculator-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group select {
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Результат калькулятора */
+.calculator-result {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-beige);
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+}
+
+.calculator-result p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 15px;
+}
+
+.price-display {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    margin-bottom: 10px;
+}
+
+.price-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Карточки тарифов */
+.price-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.price-card {
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    padding: 35px 25px;
+    box-shadow: 0 5px 20px var(--shadow-light);
+    transition: var(--transition);
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px var(--shadow-medium);
+    border-color: var(--primary-light);
+}
+
+.price-card.featured {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.price-card.featured:hover {
+    transform: scale(1.08) translateY(-5px);
+}
+
+.price-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.price-card-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--bg-beige);
+}
+
+.price-card-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.price-card-header .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+.price-per {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+.price-features {
+    list-style: none;
+}
+
+.price-features li {
+    padding: 12px 0;
+    color: var(--text-medium);
+    position: relative;
+    padding-left: 30px;
+}
+
+.price-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Дополнительные услуги */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px var(--shadow-light);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-light);
+}
+
+.service-item:hover {
+    transform: translateX(5px);
+    border-left-color: var(--primary-color);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.service-item h4 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.service-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 30px 20px;
+    }
+    
+    .calculator-inputs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .price-display {
+        font-size: 2.5rem;
+    }
+    
+    .price-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-card.featured {
+        transform: scale(1);
+    }
+    
+    .price-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-display {
+        font-size: 2rem;
+    }
+    
+    .price-card-header .price {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janara Cakes - торты ручной работы</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Janara Cakes</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="order.html">Заказать</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>торты ручной работы</h1>
+            <p>Создаём произведения искусства для ваших особенных моментов</p>
+            <a href="order.html" class="btn btn-primary">Сделать заказ</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about section">
+        <div class="container">
+            <h2 class="section-title">О нас</h2>
+            <p class="section-subtitle">Мы создаём торты, которые запоминаются</p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Janara Cakes - это студия авторских тортов, где каждое изделие создаётся с любовью и вниманием к
+                        деталям. Мы используем только качественные ингредиенты и современные техники декорирования.</p>
+                    <p>Наши торты - это не просто десерт, это центральный элемент вашего праздника, который создаст
+                        неповторимую атмосферу и оставит яркие воспоминания.</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3>Качественные продукты</h3>
+                        <p>Только свежие и натуральные ингредиенты</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3>Своевременная доставка</h3>
+                        <p>Доставим торт точно в срок</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <h3>Индивидуальный дизайн</h3>
+                        <p>Реализуем любые ваши идеи</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные работы -->
+    <section class="popular section section-gray">
+        <div class="container">
+            <h2 class="section-title">Популярные работы</h2>
+            <p class="section-subtitle">Наши лучшие творения</p>
+
+            <div class="cake-grid">
+                <div class="cake-card">
+                    <div class="cake-image" style="background: linear-gradient(135deg, #f5e6d3 0%, #d4a574 100%);">
+                        <span class="cake-placeholder">Свадебный торт</span>
+                    </div>
+                    <div class="cake-info">
+                        <h3>Свадебный торт</h3>
+                        <p>Элегантный многоярусный торт для особенного дня</p>
+                    </div>
+                </div>
+
+                <div class="cake-card">
+                    <div class="cake-image" style="background: linear-gradient(135deg, #faf3e0 0%, #e8d5b7 100%);">
+                        <span class="cake-placeholder">День рождения</span>
+                    </div>
+                    <div class="cake-info">
+                        <h3>Торт на день рождения</h3>
+                        <p>Яркий и вкусный торт для праздника</p>
+                    </div>
+                </div>
+
+                <div class="cake-card">
+                    <div class="cake-image" style="background: linear-gradient(135deg, #f8f0e3 0%, #d9c4a9 100%);">
+                        <span class="cake-placeholder">Корпоративный</span>
+                    </div>
+                    <div class="cake-info">
+                        <h3>Корпоративный торт</h3>
+                        <p>Стильное решение для бизнес-мероприятий</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="gallery.html" class="btn btn-secondary">Смотреть все работы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Janara Cakes</h3>
+                    <p>Создаём торты с душой и любовью к деталям</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Instagram: @janara.cakes</p>
+                    <p>Email: info@janaracakes.com</p>
+                    <p>Телефон: +996 (XXX) XXX-XX-XX</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="prices.html">Цены</a></li>
+                        <li><a href="order.html">Заказать</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Janara Cakes. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
